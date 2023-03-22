@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('title','Ödeme')
 @section('content')
+    <div class="container">
     <div class="bg-content">
         <h2>Ödeme</h2>
         <div class="row">
@@ -64,6 +65,14 @@
                 <p>Ücretsiz
             </div>
         </div>
-
     </div>
+    </div>
+@endsection
+@section('footer')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
+    <script>
+        $('.kredikarti').mask('0000-0000-0000-0000', { placeholder: "____-____-____-____" });
+        $('.kredikarti_cvv').mask('000', { placeholder: "___" });
+        $('.telefon').mask('(000) 000-00-00', { placeholder: "(___) ___-__-__" });
+    </script>
 @endsection

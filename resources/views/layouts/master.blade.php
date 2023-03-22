@@ -7,6 +7,7 @@
     @yield('head')
 </head>
 <body id="commerce">
+
 @include('layouts.partials.navbar')
 @yield('content')
 @include('layouts.partials.footer')

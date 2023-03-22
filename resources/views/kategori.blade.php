@@ -6,19 +6,18 @@
     <body id="commerce">
     <div class="container">
         <ol class="breadcrumb">
-            <li><a href="#">Anasayfa</a></li>
-            <li><a href="#">Kategori</a></li>
+            <li><a href="{{route('anasayfa')}}">Anasayfa</a></li>
+            <li>{{$kategori->kategori_adi}}</li>
             <li class="active">Kategori</li>
         </ol>
         <div class="row">
             <div class="col-md-3">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Kategori Adı</div>
+                    <div class="panel-heading"></div>
                     <div class="panel-body">
                         <h3>Alt Kategoriler</h3>
                         <div class="list-group categories">
-                            <a href="#" class="list-group-item"><i class="fa fa-television"></i> Alt Kategori</a>
-                            <a href="#" class="list-group-item"><i class="fa fa-television"></i> Alt Kategori</a>
+                            @foreach()
                             <a href="#" class="list-group-item"><i class="fa fa-television"></i> Alt Kategori</a>
                         </div>
                         <h3>Fiyat Aralığı</h3>

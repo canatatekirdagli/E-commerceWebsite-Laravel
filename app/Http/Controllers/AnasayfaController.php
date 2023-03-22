@@ -9,6 +9,7 @@ class AnasayfaController extends Controller
 {
     public function index()
     {
-        return view('anasayfa');
+        $kategoriler=Kategori::whereRaw('ust_id is null')->get();
+        return view('anasayfa',compact('kategoriler'));
     }
 }
