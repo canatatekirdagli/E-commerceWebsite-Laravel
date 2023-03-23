@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','Kategori')
+@section('title',$kategori->kategori_adi)
 <body class="productPage">
 @section('content')
     <!-- product category -->
@@ -8,7 +8,7 @@
         <ol class="breadcrumb">
             <li><a href="{{route('anasayfa')}}">Anasayfa</a></li>
             <li>{{$kategori->kategori_adi}}</li>
-            <li class="active">Kategori</li>
+
         </ol>
         <div class="row">
             <div class="col-md-3">
@@ -17,8 +17,12 @@
                     <div class="panel-body">
                         <h3>Alt Kategoriler</h3>
                         <div class="list-group categories">
-                            @foreach()
-                            <a href="#" class="list-group-item"><i class="fa fa-television"></i> Alt Kategori</a>
+                            @foreach($alt_kategoriler as $alt_kategori)
+                                <a href="{{route('kategori',$alt_kategori->slug)}}"
+                                   class="list-group-item"><i class="fa fa-television"></i>
+                                    {{$alt_kategori->kategori_adi}}
+                                </a>
+                            @endforeach
                         </div>
                         <h3>Fiyat Aralığı</h3>
                         <form>
