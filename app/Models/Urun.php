@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Kategori extends Model
+class Urun extends Model
 {
     use SoftDeletes;
 
-    protected $table="kategori";
-    //protected $fillable=['kategori_adi','slug'];
+    protected $table="urun";
     protected $guarded=[];
     const CREATED_AT = 'olusturma_tarihi';
     const UPDATED_AT = 'guncelleme_tarihi';
 
-    public function urunler()
+    public function kategoriler()
     {
-        return $this->belongsToMany('App\Models\Urun','kategori_urun');
+        return $this->belongsToMany('App\Models\Kategori','kategori_urun');
     }
 }
