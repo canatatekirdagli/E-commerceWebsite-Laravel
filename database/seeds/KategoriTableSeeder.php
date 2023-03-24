@@ -25,8 +25,10 @@ class KategoriTableSeeder extends Seeder
         DB::table('kategori')->insert(['kategori_adi'=>'Çocuk Saat','slug'=>'cocuk','ust_id'=>$id]);
 
 
-        $id=DB::table('kategori')->insertGetId(['kategori_adi'=>'Akıllı Saat','slug'=>'akilli-saat']);
+        $id=DB::table('kategori')->insertGetId(['kategori_adi'=>'Akıllı Saat ve Bileklik','slug'=>'akilli-saat-bileklik']);
+        DB::table('kategori')->insert(['kategori_adi'=>'Akıllı Saat','slug'=>'akilli-saat','ust_id'=>$id]);
         DB::table('kategori')->insert(['kategori_adi'=>'Akıllı Bileklik','slug'=>'akilli-bileklik','ust_id'=>$id]);
+
 
         $id=DB::table('kategori')->insertGetId(['kategori_adi'=>'Takı ve Aksesuar','slug'=>'takıveaksesuar']);
         DB::table('kategori')->insert(['kategori_adi'=>'Parfüm','slug'=>'parfum','ust_id'=>$id]);
