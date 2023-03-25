@@ -16,7 +16,7 @@ class UrunController extends Controller
     public function ara()
     {
         $aranan=request()->input('aranan');
-        $urunler=Urun::where('urun_adi','like',"%$aranan%")->orWhere('aciklama','like',"%$aranan")->get();
+        $urunler=Urun::where('urun_adi','like',"%$aranan%")->orWhere('aciklama','like',"%$aranan")->paginate(8);
         request()->flash();
         return view('arama',compact('urunler'));
     }
