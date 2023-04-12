@@ -965,6 +965,10 @@ module.exports = __webpack_require__(55);
 
 __webpack_require__(11);
 
+setTimeout(function () {
+  $('.alert').slideUp(500);
+}, 3000);
+
 window.Vue = __webpack_require__(47);
 
 /**

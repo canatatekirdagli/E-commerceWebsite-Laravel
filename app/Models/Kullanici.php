@@ -17,4 +17,9 @@ class Kullanici extends Authenticatable
 
     protected $fillable = ['adsoyad', 'email', 'sifre','aktivasyon_anahtari','aktif_mi'];
     protected $hidden = ['sifre', 'aktivasyon_anahtari'];
+
+    public function getAuthPassword()
+    {
+        return $this->sifre;
+    }
 }

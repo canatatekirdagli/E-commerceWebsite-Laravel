@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('title','Anasayfa')
 @section('content')
+    @include('layouts.partials.alert')
     <section id="menu">
         <div class="container">
             <div class="menu-area">
