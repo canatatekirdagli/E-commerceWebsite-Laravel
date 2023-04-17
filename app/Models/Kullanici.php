@@ -22,4 +22,9 @@ class Kullanici extends Authenticatable
     {
         return $this->sifre;
     }
+
+    public function detay()
+    {
+        return $this->hasOne('App\Models\KullaniciDetay');
+    }
 }

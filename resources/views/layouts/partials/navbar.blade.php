@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{route('anasayfa')}}">
-                <img src="/img/logo.png">
+                <img src="https://static.ticimax.cloud/47965/uploads/editoruploads/new-logo-tiktak-saat.png">
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,7 +25,7 @@
                 </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><i class="fa fa-shopping-cart"></i> Sepet <span class="badge badge-theme">5</span></a></li>
+                <li><a href="{{route('sepet')}}"><i class="fa fa-shopping-cart"></i> Sepet <span class="badge badge-theme">{{Cart::count()}}</span></a></li>
 
                 @guest()
                 <li><a href="{{route('kullanici.oturumac')}}">Oturum Aç</a></li>
@@ -33,18 +33,19 @@
                 @endguest
 
                 @auth()
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Profil <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Siparişlerim</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Çıkış</a>
-                        <form id="logout-form" action="{{route('kullanici.oturumukapat')}}" method="POST" style="display: none">
-                            {{csrf_field()}}
-                        </form>
-                        </li>
-                    </ul>
-                </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {{ Auth::user()->adsoyad }} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route('siparisler') }}">Siparişlerim</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Çıkış</a>
+                                <form id="logout-form" action="{{ route('kullanici.oturumukapat') }}" method="post" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
                 @endauth
             </ul>
         </div>

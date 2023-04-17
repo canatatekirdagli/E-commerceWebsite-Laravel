@@ -19,7 +19,7 @@ class CreateUrunTable extends Migration
             $table->string('urun_adi');
             $table->string('slug');
             $table->text('aciklama');
-            $table->decimal('fiyati',6,3);
+            $table->decimal('fiyati',6,2);
             $table->timestamp('olusturma_tarihi')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('guncelleme_tarihi')->default(DB::raw('CURRENT_TIMESTAMP on UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
