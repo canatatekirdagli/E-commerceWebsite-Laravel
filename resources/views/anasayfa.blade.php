@@ -39,11 +39,13 @@
                 <div class="panel-body">
                     <div class="row">
                         @foreach($urunler_one_cikan as $urun)
-                        <div class="col-md-3 product">
-                            <a href="{{route('urun',$urun->slug)}}"><img src="http://via.placeholder.com/400x400?text=UrunResmi"></a>
-                            <p><a href="{{route('urun',$urun->slug)}}">{{$urun->urun_adi}}</a></p>
-                            <p class="price">{{$urun->fiyati}} ₺</p>
-                        </div>
+                            <div class="col-md-3 product">
+                                <a href="{{ route('urun', $urun->slug) }}">
+                                    <img src="{{ $urun->detay->urun_resmi!=null ? asset('uploads/urunler/' . $urun->detay->urun_resmi) : 'http://via.placeholder.com/400x400?text=UrunResmi' }}">
+                                </a>
+                                <p><a href="{{ route('urun', $urun->slug) }}">{{ $urun->urun_adi }}</a></p>
+                                <p class="price">{{ round($urun->fiyati, 2) }} ₺</p>
+                            </div>
                         @endforeach
                     </div>
                 </div>
@@ -57,9 +59,11 @@
                     <div class="row">
                         @foreach($urunler_cok_satan as $urun)
                             <div class="col-md-3 product">
-                                <a href="{{route('urun',$urun->slug)}}"><img src="http://via.placeholder.com/400x400?text=UrunResmi"></a>
-                                <p><a href="{{route('urun',$urun->slug)}}">{{$urun->urun_adi}}</a></p>
-                                <p class="price">{{$urun->fiyati}} ₺</p>
+                                <a href="{{ route('urun', $urun->slug) }}">
+                                    <img src="{{ $urun->detay->urun_resmi!=null ? asset('uploads/urunler/' . $urun->detay->urun_resmi) : 'http://via.placeholder.com/400x400?text=UrunResmi' }}">
+                                </a>
+                                <p><a href="{{ route('urun', $urun->slug) }}">{{ $urun->urun_adi }}</a></p>
+                                <p class="price">{{ round($urun->fiyati, 2) }} ₺</p>
                             </div>
                         @endforeach
                     </div>
@@ -73,9 +77,11 @@
                     <div class="row">
                         @foreach($urunler_indirimli as $urun)
                             <div class="col-md-3 product">
-                                <a href="{{route('urun',$urun->slug)}}"><img src="http://via.placeholder.com/400x400?text=UrunResmi"></a>
-                                <p><a href="{{route('urun',$urun->slug)}}">{{$urun->urun_adi}}</a></p>
-                                <p class="price">{{$urun->fiyati}} ₺</p>
+                                <a href="{{ route('urun', $urun->slug) }}">
+                                    <img src="{{ $urun->detay->urun_resmi!=null ? asset('uploads/urunler/' . $urun->detay->urun_resmi) : 'http://via.placeholder.com/400x400?text=UrunResmi' }}">
+                                </a>
+                                <p><a href="{{ route('urun', $urun->slug) }}">{{ $urun->urun_adi }}</a></p>
+                                <p class="price">{{ round($urun->fiyati, 2) }} ₺</p>
                             </div>
                         @endforeach
                     </div>
