@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\Sepet;
 use App\Models\SepetUrun;
 use App\Models\Urun;
+use App\Models\Kategori;
 use Cart;
 use Validator;
 

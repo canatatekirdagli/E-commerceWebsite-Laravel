@@ -15,11 +15,6 @@
                 </tr>
                 @foreach(Cart::content() as $urunCartItem)
                     <tr>
-                        <td style="width: 120px;">
-                            <a href="{{route('urun',str_slug($urunCartItem->name))}}">
-                                <img src="http://via.placeholder.com/120x100?text=UrunResmi">
-                            </a>
-                        </td>
                         <td>
                             <a href="{{route('urun',str_slug($urunCartItem->name))}}">
                                 {{ $urunCartItem->name }}
@@ -34,9 +29,7 @@
                         </td>
                         <td>{{ $urunCartItem->price }} ₺</td>
                         <td>
-                            <a href="#" class="btn btn-xs btn-default urun-adet-azalt" data-id="{{ $urunCartItem->rowId }}" data-adet="{{ $urunCartItem->qty-1 }}">-</a>
                             <span style="padding: 10px 20px">{{ $urunCartItem->qty }}</span>
-                            <a href="#" class="btn btn-xs btn-default urun-adet-artir" data-id="{{ $urunCartItem->rowId }}" data-adet="{{ $urunCartItem->qty+1 }}">+</a>
                         </td>
                         <td class="text-right">
                             {{ $urunCartItem->subtotal }} ₺
