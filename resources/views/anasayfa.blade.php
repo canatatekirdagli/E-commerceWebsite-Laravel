@@ -18,7 +18,7 @@
                     <div class="navbar-collapse collapse">
                         <!-- Left nav -->
                         <ul class="nav navbar-nav">
-                            <li><a href="/">Home</a></li>
+                            <li><a href="/">Anasayfa</a></li>
                             @foreach($kategoriler as $kategori)
                                 <li><a href="{{route('kategori',$kategori->slug)}}">
                                         {{$kategori->kategori_adi}}

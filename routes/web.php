@@ -45,6 +45,10 @@ Route::group(['prefix' => 'yonetim', 'namespace' => 'Yonetim'], function () {
 });
 
 Route::get('/', 'AnasayfaController@index')->name('anasayfa');
+Route::get('/fatura', 'AnasayfaController@fatura')->name('fatura');
+Route::get('/kargoveiade', 'AnasayfaController@kargoveiade')->name('kargoveiade');
+Route::get('/nasilalirim', 'AnasayfaController@nasilalirim')->name('nasilalirim');
+Route::get('/neden', 'AnasayfaController@neden')->name('neden');
 
 Route::get('/kategori/{slug_kategoriadi}','KategoriController@index')->name('kategori');
 

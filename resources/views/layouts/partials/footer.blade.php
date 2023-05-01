@@ -8,40 +8,14 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-6">
                                 <div class="aa-footer-widget">
-                                    <h3>Main Menu</h3>
-                                    <ul class="aa-footer-nav">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Our Services</a></li>
-                                        <li><a href="#">Our Products</a></li>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="aa-footer-widget">
                                     <div class="aa-footer-widget">
-                                        <h3>Knowledge Base</h3>
+                                        <h3>TikTak Saat</h3>
                                         <ul class="aa-footer-nav">
-                                            <li><a href="#">Delivery</a></li>
-                                            <li><a href="#">Returns</a></li>
-                                            <li><a href="#">Services</a></li>
-                                            <li><a href="#">Discount</a></li>
-                                            <li><a href="#">Special Offer</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="aa-footer-widget">
-                                    <div class="aa-footer-widget">
-                                        <h3>Useful Links</h3>
-                                        <ul class="aa-footer-nav">
-                                            <li><a href="#">Site Map</a></li>
-                                            <li><a href="#">Search</a></li>
-                                            <li><a href="#">Advanced Search</a></li>
-                                            <li><a href="#">Suppliers</a></li>
-                                            <li><a href="#">FAQ</a></li>
+                                            <li><a href="{{route('neden')}}">Neden Biz?</a></li>
+                                            <li><a href="{{route('fatura')}}">E-Garanti ve E-Fatura</a></li>
+                                            <li><a href="{{route('nasilalirim')}}">Nasıl Alırım</a></li>
+                                            <li><a href="{{route('kargoveiade')}}">Kargo ve İade İşlemleri</a></li>
+                                            <li><a href="{{route('yonetim.oturumac')}}">Admin Paneli</a></li>
                                         </ul>
                                     </div>
                                 </div>

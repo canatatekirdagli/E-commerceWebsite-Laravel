@@ -72,7 +72,7 @@ class UrunController extends Controller
 
         if (request()->hasFile('urun_resmi')) {
             $this->validate(request(), [
-                'urun_resmi' => 'image|mimes:jpg,png,jpeg,gif|max:2048'
+                'urun_resmi' => 'image|mimes:jpg,png,jpeg,gif|max:9999'
             ]);
 
             $urun_resmi = request()->file('urun_resmi');

@@ -32,4 +32,16 @@ class AnasayfaController extends Controller
 
         return view('anasayfa',compact('kategoriler','urunler_one_cikan','urunler_cok_satan','urunler_indirimli'));
     }
+    public function fatura(){
+        return view('fatura');
+    }
+    public function kargoveiade(){
+        return view('kargoveiade');
+    }
+    public function nasilalirim(){
+        return view('nasilalirim');
+    }
+    public function neden(){
+        return view('neden');
+    }
 }

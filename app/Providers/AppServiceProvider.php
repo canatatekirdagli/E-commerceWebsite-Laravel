@@ -4,6 +4,14 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Config;
+use App\Models\Siparis;
+use App\Models\Urun;
+use App\Models\Kategori;
+use App\Models\Kullanici;
+use App\Models\Ayar;
+use Illuminate\Support\Facades\Cache;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,7 +22,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(1911);
+        Schema::defaultStringLength(191);
+
+        $bitisZamani = now()->addMinutes(10);
+        $istatistikler = Cache::remember('istatistikler', $bitisZamani, function () {
+            return [
+                'bekleyen_siparis' => Siparis::where('durum', 'Siparişiniz alındı')->count(),
+                'tamamlanan_siparis' => Siparis::where('durum', 'Sipariş tamamlandı')->count(),
+                'toplam_urun' => Urun::count(),
+                'toplam_kategori' => Kategori::count(),
+                'toplam_kullanici' => Kullanici::count()
+            ];
+        });
+        View::share('istatistikler', $istatistikler);
     }
 
     /**
