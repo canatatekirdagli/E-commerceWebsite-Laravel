@@ -45,8 +45,8 @@
                         @endif
                         @foreach($urunler as $urun)
                         <div class="col-md-3 product">
-                            <a href="{{route('urun',$urun->slug)}}"><img src="http://via.placeholder.com/640x400?text=UrunResmi"></a>
-                            <p><a href="{{route('urun',$urun->slug)}}"> {{$urun->urun_adi}}</a></p>
+                            <a href="{{route('urun',$urun->slug)}}"><img src="{{ $urun->detay->urun_resmi!=null ? asset('uploads/urunler/' . $urun->detay->urun_resmi) : 'http://via.placeholder.com/400x400?text=UrunResmi' }}">
+                                <p><a href="{{route('urun',$urun->slug)}}"> {{$urun->urun_adi}}</a></p>
                             <p class="price">{{$urun->fiyati}} ₺</p>
                             <p><a href="#" class="btn btn-theme">Sepete Ekle</a></p>
                         </div>

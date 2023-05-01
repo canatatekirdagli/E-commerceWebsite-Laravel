@@ -72,15 +72,12 @@ class UrunController extends Controller
 
         if (request()->hasFile('urun_resmi')) {
             $this->validate(request(), [
-                'urun_resmi' => 'image|mimes:jpg,png,jpeg,gif|max:9999'
+                'urun_resmi' => 'mimes:jpg,png,jpeg,gif|max:10240'
             ]);
 
             $urun_resmi = request()->file('urun_resmi');
-            //$urun_resmi = request()->urun_resmi;
 
             $dosyaadi = $entry->id . "-" . time() . "." . $urun_resmi->extension();
-            //$dosyaadi = $urun_resmi->getClientOriginalName();
-            //$dosyaadi = $urun_resmi->hashName();
 
             if ($urun_resmi->isValid()) {
                 File::delete('uploads/urunler/' . $entry->detay->urun_resmi);
