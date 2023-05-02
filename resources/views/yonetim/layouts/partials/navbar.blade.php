@@ -13,7 +13,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">TikTak Saat Yönetici Paneli</a>
+            <a class="navbar-brand" href="{{route('yonetim.anasayfa')}}">TikTak Saat Yönetici Paneli</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

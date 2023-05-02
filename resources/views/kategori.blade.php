@@ -48,7 +48,11 @@
                             <a href="{{route('urun',$urun->slug)}}"><img src="{{ $urun->detay->urun_resmi!=null ? asset('uploads/urunler/' . $urun->detay->urun_resmi) : 'http://via.placeholder.com/400x400?text=UrunResmi' }}">
                                 <p><a href="{{route('urun',$urun->slug)}}"> {{$urun->urun_adi}}</a></p>
                             <p class="price">{{$urun->fiyati}} ₺</p>
-                            <p><a href="#" class="btn btn-theme">Sepete Ekle</a></p>
+                                <form action="{{route('sepet.ekle')}}" method="POST">
+                                    {{csrf_field()}}
+                                    <input type="hidden" name="id" value="{{$urun->id}}">
+                                    <input type="submit" class="btn btn-theme" value="Sepete Ekle">
+                                </form>
                         </div>
                         @endforeach
                     </div>

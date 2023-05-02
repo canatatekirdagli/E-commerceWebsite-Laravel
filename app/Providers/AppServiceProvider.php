@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        $bitisZamani = now()->addMinutes(10);
+        $bitisZamani = now()->addMinutes(1);
         $istatistikler = Cache::remember('istatistikler', $bitisZamani, function () {
             return [
                 'bekleyen_siparis' => Siparis::where('durum', 'Siparişiniz alındı')->count(),

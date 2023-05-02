@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: Raleway, 'Segoe UI', Arial, sans-serif;
+  font-family: Raleway, 'Roboto Thin', Arial, sans-serif;
   font-size: 1rem;
 }
 
@@ -17,7 +17,7 @@ h1 {
 }
 
 a {
-  color: #333;
+  color: #000000;
 }
 
 #commerce {
@@ -52,12 +52,12 @@ a {
 }
 
 #commerce .panel-theme .panel-heading {
-  color: #333;
+  color: #ffffff;
   font-weight: 600;
   border-color: #ddd;
-  border-top: 2px solid #e52d04;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dfdfdf));
-  background: linear-gradient(to bottom, #fff 0%, #dfdfdf 100%);
+  border-top: 2px solid #0210ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(#0000ff));
+  background: linear-gradient(to bottom, blue 0%, #0000ff 100%);
 }
 
 #commerce .panel-default h3 {
@@ -68,12 +68,12 @@ a {
 
 #commerce .badge-theme {
   font-weight: 400;
-  background-color: #e52d04;
+  background-color: #0210ff;
   margin-top: -15px;
 }
 
 #commerce .btn-theme {
-  background-color: #e52d04;
+  background-color: #0210ff;
   color: #fff;
 }
 
@@ -142,7 +142,7 @@ a {
   font-weight: 600;
   border-bottom: inherit;
   margin-top: 3px;
-  border-top: 2px solid #e52d04;
+  border-top: 2px solid #0210ff;
   background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#dfdfdf));
   background: linear-gradient(to top, #fff 0%, #dfdfdf 100%);
 }

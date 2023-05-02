@@ -29,11 +29,12 @@
                                             <p><span class="fa fa-phone"></span>+1 212-982-4589</p>
                                             <p><span class="fa fa-envelope"></span>tiktaksaat@tiktaksaat.com</p>
                                         </address>
+
                                         <div class="aa-footer-social">
-                                            <a href="#"><span class="fa fa-facebook"></span></a>
-                                            <a href="#"><span class="fa fa-twitter"></span></a>
-                                            <a href="#"><span class="fa fa-google-plus"></span></a>
-                                            <a href="#"><span class="fa fa-youtube"></span></a>
+                                            <span class="fa fa-cc-mastercard"></span>
+                                            <span class="fa fa-cc-visa"></span>
+                                            <span class="fa fa-paypal"></span>
+                                            <span class="fa fa-cc-discover"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -52,10 +53,7 @@
                     <div class="aa-footer-bottom-area">
                         <p>Programmed by <a href="https://github.com/canatatekirdagli">Can Ata Tekirdağlı</a></p>
                         <div class="aa-footer-payment">
-                            <span class="fa fa-cc-mastercard"></span>
-                            <span class="fa fa-cc-visa"></span>
-                            <span class="fa fa-paypal"></span>
-                            <span class="fa fa-cc-discover"></span>
+
                         </div>
                     </div>
                 </div>
