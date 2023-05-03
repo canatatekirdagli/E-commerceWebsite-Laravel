@@ -44,7 +44,7 @@
                                     <img src="{{ $urun->detay->urun_resmi!=null ? asset('uploads/urunler/' . $urun->detay->urun_resmi) : 'http://via.placeholder.com/400x400?text=UrunResmi' }}">
                                 </a>
                                 <p><a href="{{ route('urun', $urun->slug) }}">{{ $urun->urun_adi }}</a></p>
-                                <p class="price">{{ round($urun->fiyati, 2) }} ₺</p>
+                                <p class="price">{{ $urun->fiyati}} ₺</p>
                             </div>
                         @endforeach
                     </div>
@@ -63,7 +63,7 @@
                                     <img src="{{ $urun->detay->urun_resmi!=null ? asset('uploads/urunler/' . $urun->detay->urun_resmi) : 'http://via.placeholder.com/400x400?text=UrunResmi' }}">
                                 </a>
                                 <p><a href="{{ route('urun', $urun->slug) }}">{{ $urun->urun_adi }}</a></p>
-                                <p class="price">{{ round($urun->fiyati, 2) }} ₺</p>
+                                <p class="price">{{ $urun->fiyati }} ₺</p>
                             </div>
                         @endforeach
                     </div>
@@ -81,7 +81,7 @@
                                     <img src="{{ $urun->detay->urun_resmi!=null ? asset('uploads/urunler/' . $urun->detay->urun_resmi) : 'http://via.placeholder.com/400x400?text=UrunResmi' }}">
                                 </a>
                                 <p><a href="{{ route('urun', $urun->slug) }}">{{ $urun->urun_adi }}</a></p>
-                                <p class="price">{{ round($urun->fiyati, 2) }} ₺</p>
+                                <p class="price">{{ $urun->fiyati }} ₺</p>
                             </div>
                         @endforeach
                     </div>

@@ -6,7 +6,7 @@ body {
   padding-top: 50px;
   padding-bottom: 40px;
   background: #ffffff;
-  background: radial-gradient(ellipse at center, #ffffff 0%, #c1c1c1 100%);
+  background: radial-gradient(ellipse at center, #ffffff 0%, #ffffff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#c1c1c1', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
@@ -15,7 +15,7 @@ body {
   max-width: 330px;
   padding: 14px;
   margin: 0 auto;
-  background-color: rgba(230, 230, 230, 0.5);
+  background-color: white;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   border-radius: 6px;
@@ -69,13 +69,13 @@ body {
 }
 
 .form-signin .btn-primary {
-  background-color: #f4645f;
-  border-color: #f4645f;
+  background-color: #0000FFFF;
+  border-color: #0000FFFF;
 }
 
 .form-signin .btn-primary:hover {
-  background-color: #e74430 !important;
-  border-color: #e74430 !important;
+  background-color: #0000FFFF !important;
+  border-color: #0000FFFF !important;
   color: #fff !important;
 }
 

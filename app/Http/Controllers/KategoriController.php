@@ -17,15 +17,15 @@ class KategoriController extends Controller
         {
             $urunler=$kategori->urunler()->distinct()
                 ->join('urun_detay','urun_detay.urun_id','urun.id')->orderBy('urun_detay.goster_cok_satan','desc')
-            ->paginate(2);
+            ->paginate(4);
         }
         elseif ($order=='yeni')
         {
-            $urunler=$kategori->urunler()->distinct()->orderByDesc('guncelleme_tarihi')->paginate(2);
+            $urunler=$kategori->urunler()->distinct()->orderByDesc('guncelleme_tarihi')->paginate(4);
         }
         else
         {
-            $urunler=$kategori->urunler()->distinct()->paginate(2);
+            $urunler=$kategori->urunler()->distinct()->paginate(4);
         }
 
 
